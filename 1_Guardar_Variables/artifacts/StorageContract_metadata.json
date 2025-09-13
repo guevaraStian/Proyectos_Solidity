@@ -1,0 +1,214 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "numeroEntero",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "booleano",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "numeroDecimalSimulado",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes1",
+						"name": "caracter",
+						"type": "bytes1"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "texto",
+						"type": "string"
+					}
+				],
+				"name": "DatosGuardados",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "booleano",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "caracter",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_numeroEntero",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_booleano",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_numeroDecimalSimulado",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes1",
+						"name": "_caracter",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "string",
+						"name": "_texto",
+						"type": "string"
+					}
+				],
+				"name": "guardarDatos",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numeroDecimalSimulado",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numeroEntero",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerDatos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "texto",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Contrato.sol": "StorageContract"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Contrato.sol": {
+			"keccak256": "0x8b3e48ef0e99480d15ac1018c0c77b0029b757cc101e1350e18d951abe089fc3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1d071b10cc01752285b1a5c814fd6284078ac4baddd069bd8ecc5a7710aa1e44",
+				"dweb:/ipfs/QmWWfyu3t62N8erYThyNPFrYYyEAzeHut99kggUzLDWCrj"
+			]
+		}
+	},
+	"version": 1
+}
