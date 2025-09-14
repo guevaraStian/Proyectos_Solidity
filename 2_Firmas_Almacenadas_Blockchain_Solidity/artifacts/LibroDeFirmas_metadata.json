@@ -1,0 +1,350 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "firmante",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Texto_firma",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "hash_firma",
+						"type": "bytes32"
+					}
+				],
+				"name": "NuevaFirma",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_hash_firma",
+						"type": "bytes32"
+					}
+				],
+				"name": "buscarFirmaPorHash",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "firmante",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "Texto_firma",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Texto_firma",
+						"type": "string"
+					}
+				],
+				"name": "buscarFirmasPorTexto",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "firmante",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "Texto_firma",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fecha",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "hash_firma",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct LibroDeFirmas.Firma[]",
+						"name": "resultados",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Texto_firma",
+						"type": "string"
+					}
+				],
+				"name": "firmar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "firmas",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "firmante",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "Texto_firma",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash_firma",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Texto_firma",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_fecha",
+						"type": "uint256"
+					}
+				],
+				"name": "generarHashLibro",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "indicePorHashLibro",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "indicesPorTextoFirma",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerCantidadFirmas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "indice",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerFirmaPorIndice",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "firmante",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "Texto_firma",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash_firma",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"buscarFirmasPorTexto(string)": {
+					"params": {
+						"_Texto_firma": "Texto exacto a buscar"
+					}
+				},
+				"firmar(string)": {
+					"params": {
+						"_Texto_firma": "El texto del mensaje a firmar"
+					}
+				},
+				"generarHashLibro(string,uint256)": {
+					"params": {
+						"_Texto_firma": "El texto exacto usado",
+						"_fecha": "El timestamp usado en la firma original"
+					}
+				}
+			},
+			"title": "Libro de Firmas con búsqueda por texto, fecha y hash",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"buscarFirmaPorHash(bytes32)": {
+					"notice": "Devuelve una firma por su hash_firmaEn la siguiente variable se guarda el hash \"bytes32 _hash_firma\"Ejemplo 0xbe2b67652a8d3d321bdf67f673fd3705e8ddf81d16ed8781e69c034491d50448"
+				},
+				"buscarFirmasPorTexto(string)": {
+					"notice": "Devuelve todas las firmas que tengan un texto específicoEn la siguiente variable se guarda el hash \"string _Texto_firma\"Ejemplo 1234567"
+				},
+				"firmar(string)": {
+					"notice": "Permite a un usuario firmar el libro"
+				},
+				"generarHashLibro(string,uint256)": {
+					"notice": "Genera el hash_firma fuera del contrato (útil para buscar)"
+				},
+				"obtenerCantidadFirmas()": {
+					"notice": "Devuelve la cantidad total de firmas registradas"
+				},
+				"obtenerFirmaPorIndice(uint256)": {
+					"notice": "Devuelve una firma específica por índiceEmpieza en 0"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/LibroDeFirmas.sol": "LibroDeFirmas"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LibroDeFirmas.sol": {
+			"keccak256": "0x703ae5cb79adac7983986e18a744bfc954ecd8c54915f1a5ec34a386c5df5a9c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b04399192fb70bb107ae7682c4d358aca92836e2deb0c95b4ee038c2d020a0d6",
+				"dweb:/ipfs/Qmbi3iKDoUKRe6b8D3TnPmLUHmS7ESvrDDzrDidZb65XAD"
+			]
+		}
+	},
+	"version": 1
+}
