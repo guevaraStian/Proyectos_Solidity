@@ -1,0 +1,436 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "nuevo_estado",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "nuevo_hash_tarea",
+						"type": "bytes32"
+					}
+				],
+				"name": "EstadoActualizado",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Descripcion_De_Tarea",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "estado",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "hash_tarea",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"name": "TareaCreada",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "indice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "nuevoEstado",
+						"type": "uint8"
+					}
+				],
+				"name": "actualizarEstado",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_hash_tarea",
+						"type": "bytes32"
+					}
+				],
+				"name": "buscarTareaPorHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Descripcion_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "estado",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Nombre_De_Tarea",
+						"type": "string"
+					}
+				],
+				"name": "buscarTareasPorNombre",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "Nombre_De_Tarea",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "Descripcion_De_Tarea",
+								"type": "string"
+							},
+							{
+								"internalType": "enum ListaDeTareas.EstadoTarea",
+								"name": "estado",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fecha_creacion",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "hash_tarea",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "address",
+								"name": "creador",
+								"type": "address"
+							}
+						],
+						"internalType": "struct ListaDeTareas.Tarea[]",
+						"name": "resultados",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_Descripcion_De_Tarea",
+						"type": "string"
+					}
+				],
+				"name": "crearTarea",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "_estado",
+						"type": "uint8"
+					}
+				],
+				"name": "generarHashTarea",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "indicePorHashTarea",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "indicesPorNombre",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerCantidadTareas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "indice",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerTareaPorIndice",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Descripcion_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "estado",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash_tarea",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tareas",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Nombre_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Descripcion_De_Tarea",
+						"type": "string"
+					},
+					{
+						"internalType": "enum ListaDeTareas.EstadoTarea",
+						"name": "estado",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha_creacion",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash_tarea",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Lista de Tareas en Solidity con búsqueda por hash y nombre",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"actualizarEstado(uint256,uint8)": {
+					"notice": "Cambia el estado de una tarea y actualiza su hash"
+				},
+				"buscarTareaPorHash(bytes32)": {
+					"notice": "Busca tarea por hash_tarea"
+				},
+				"buscarTareasPorNombre(string)": {
+					"notice": "Busca todas las tareas con un nombre específico"
+				},
+				"crearTarea(string,string)": {
+					"notice": "Crea una nueva tarea"
+				},
+				"generarHashTarea(string,uint256,uint8)": {
+					"notice": "Genera un hash único de la tarea con nombre, fecha y estado"
+				},
+				"obtenerCantidadTareas()": {
+					"notice": "Devuelve la cantidad total de tareas"
+				},
+				"obtenerTareaPorIndice(uint256)": {
+					"notice": "Devuelve una tarea por índice"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ListaDeTareas.sol": "ListaDeTareas"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ListaDeTareas.sol": {
+			"keccak256": "0xfb5dc1c2043049e2cecbea4c4e8379343a93375b4868d4329ac652097b6fb42d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://424bdc1da0c1100b55a9811ff59b98c13c817c4c6f41548b650a8a786388f40f",
+				"dweb:/ipfs/QmStkLNRz5ai4mVUBVVAUMSDpPtKDcVZKJdMjeREzdY8br"
+			]
+		}
+	},
+	"version": 1
+}
