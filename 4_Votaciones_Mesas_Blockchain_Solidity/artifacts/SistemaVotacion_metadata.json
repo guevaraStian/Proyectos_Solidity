@@ -1,0 +1,431 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "hash_planilla",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ciudad",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "numero_mesa",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "fecha_creacion_planilla",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"name": "PlanillaRegistrada",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "buscarPlanillaPorHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "ciudad",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numero_mesa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre_votante_1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad_1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre_votante_2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad_2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votos_blanco",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votos_totales",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha_creacion_planilla",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_ciudad",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_numero_mesa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_nombre_votante_1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cantidad_1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_nombre_votante_2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cantidad_2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_votos_blanco",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_fecha",
+						"type": "uint256"
+					}
+				],
+				"name": "generarHashPlanilla",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "indicePorHash",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerCantidadPlanillas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "indice",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerPlanillaPorIndice",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "ciudad",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numero_mesa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre_votante_1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad_1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre_votante_2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad_2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votos_blanco",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votos_totales",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha_creacion_planilla",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash_planilla",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "planillas",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "ciudad",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numero_mesa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre_votante_1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad_1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre_votante_2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad_2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votos_blanco",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votos_totales",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha_creacion_planilla",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash_planilla",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "creador",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_ciudad",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_numero_mesa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_nombre_votante_1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cantidad_1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_nombre_votante_2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cantidad_2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_votos_blanco",
+						"type": "uint256"
+					}
+				],
+				"name": "registrarPlanilla",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Sistema de almacenamiento de votaciones",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"buscarPlanillaPorHash(bytes32)": {
+					"notice": "Buscar planilla por su hash"
+				},
+				"generarHashPlanilla(string,uint256,string,uint256,string,uint256,uint256,uint256)": {
+					"notice": "Generar hash para verificacion externa"
+				},
+				"obtenerCantidadPlanillas()": {
+					"notice": "Obtener la cantidad total de planillas"
+				},
+				"obtenerPlanillaPorIndice(uint256)": {
+					"notice": "Obtener una planilla por su indice"
+				},
+				"registrarPlanilla(string,uint256,string,uint256,string,uint256,uint256)": {
+					"notice": "Registrar una nueva planilla"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SistemaVotacion.sol": "SistemaVotacion"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SistemaVotacion.sol": {
+			"keccak256": "0xf54b994922e285de78a43216e494026741e34470f03efadaa8e9d827f626b6ee",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://382089bc26e42a5dcb5eb7f817bf5388efde72c476f73e9b9961a6d8a0fd95de",
+				"dweb:/ipfs/QmaEbMN44mQNZQhi6ZPXXuncohBokLgQDvkP12YFb5jgQU"
+			]
+		}
+	},
+	"version": 1
+}
