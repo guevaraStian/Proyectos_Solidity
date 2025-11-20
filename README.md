@@ -5,7 +5,7 @@
 
 ----------------
 
-Luego de descargar git, Los comandos para acceder al repositorio son los siguientes.
+Luego de descargar git desde la pagina fuente, Los comandos para acceder al repositorio son los siguientes.
 
 ```Terminal de comandos
 git --version
