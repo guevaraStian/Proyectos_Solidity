@@ -15,3 +15,5 @@ cd Proyectos_Solidity
 git push origin master
 ```
 ---------
+
+Solidity se ejecuta en su IDE.
