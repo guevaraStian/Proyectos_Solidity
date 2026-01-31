@@ -16,4 +16,4 @@ git push origin master
 ```
 ---------
 
-Solidity se ejecuta en su IDE.
+Solidity se ejecuta en su IDE. En RemixIDE se abre la carpeta que se va a ejecutar
