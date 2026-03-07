@@ -5,7 +5,8 @@
 
 ----------------
 En esta carpeta encontraremos varios proyectos de blockchain con lenguaje de programacion solidity. Con el fin de poner a funcionar los software hay que descargar el repositorio.
-Luego de descargar git desde la pagina fuente, Los comandos para acceder al repositorio son los siguientes.
+Luego de descargar git desde la pagina fuente, Se puede descargar estos programas dando click en el boton verde y en dowload o siguiendo los pasos a continuacion.
+Los comandos para acceder al repositorio son los siguientes.
 
 ```Terminal de comandos
 git --version
