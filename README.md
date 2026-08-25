@@ -4,7 +4,7 @@
 
 
 ----------------
-En esta carpeta encontraremos varios proyectos de blockchain con lenguaje de programacion solidity, desde guardar variables en blockchain , pasando por firmas de almacenamiento, hasta tareas, votaciones y candidatos electorales almacenados en blockchain, todo desde el IDE de solidity. 
+En esta carpeta encontraremos varios proyectos de blockchain con lenguaje de programacion solidity, desde guardar variables en blockchain , pasando por firmas de almacenamiento, hasta tareas, votaciones, candidatos electorales almacenados en blockchain y contratos inteligentes, todos los datos enlasados entre si con blockchain, todo desde el IDE de solidity. 
 
 Con el fin de poner a funcionar los software hay que descargar el repositorio.
 Luego de descargar git desde la pagina fuente, Se puede descargar estos programas dando click en el boton verde y en dowload o siguiendo los pasos a continuacion.
