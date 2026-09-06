@@ -16,7 +16,7 @@ WINDOWS
 winget install --id Git.Git -e --source winget
 ```
 
-LINUX, Fedora, Arch Linux, CentOS
+LINUX, Fedora, Arch Linux, CentOS, Cada comando es especial para cada sistema operativo
 ```Linux Fedora, Arch Linux, CentOS
 sudo dnf install git -y
 sudo pacman -S git
