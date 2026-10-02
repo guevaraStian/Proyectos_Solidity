@@ -28,7 +28,7 @@ brew install git
 ```
 
 
-Luego de descargar e intalar git tenemos los siguientes comandos para acceder al repositorio, son los mismos comandos en cualquier sistema operativo.
+Luego de descargar e intalar git tenemos los siguientes comandos para acceder al repositorio, son los mismos comandos en cualquier sistema operativo pero luego de haber instalado git.
 
 ```Terminal de comandos
 git --version
