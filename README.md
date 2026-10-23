@@ -39,5 +39,5 @@ git push origin master
 ```
 ---------
 
-Luego de haber descargado los proyectos, se procede a abrir cada uno.
+Luego de haber descargado los proyectos, se procede a abrir cada uno ingresando a la carpeta indicada.
 Solidity se ejecuta en su IDE. En RemixIDE se abre la carpeta que se va a ejecutar. COn este IDE se puede ejecutar cada uno de los software con solidity
