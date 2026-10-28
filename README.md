@@ -9,7 +9,7 @@ En esta carpeta encontraremos varios proyectos de blockchain con lenguaje de pro
 Con el fin de poner a funcionar los software hay que descargar el repositorio.
 Luego de descargar git desde la pagina fuente, Se puede descargar estos programas dando click en el boton verde y en dowload o siguiendo los pasos a continuacion.
 
-El comando de consola para intalar GIT en cada sistema operativo es el siguiente.
+El comando de consola que sirven para intalar GIT en cada sistema operativo es el siguiente respectivamente.
 
 WINDOWS
 ```Windows
